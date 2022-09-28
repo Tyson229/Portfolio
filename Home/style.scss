@@ -1,0 +1,122 @@
+body {
+    padding: 20px;
+    background-color: #efefef;
+    font-family: 'Montserrat', sans-serif;
+font-family: 'Roboto', sans-serif;
+}
+.navigation {
+    display: flex;
+    justify-content: flex-end;    
+    color: black;
+    margin-bottom: 10px;
+
+    &__link {
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 3px;
+        padding:10px 20px;
+        &:hover {
+            background-color: rgb(88, 96, 96);
+            color: white;
+        }
+    }
+}
+
+.header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px grey;
+    margin-bottom: 10px;
+
+    &__name {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        border-radius: 5px;
+    }
+
+    &__image {
+        width: 300px;
+        height: 300px;
+    }
+
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: center;
+
+    &__header {
+        align-self: center;
+    }
+
+    &__exp {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        &__item {
+            width: 300px;
+            height: 300px;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 5px;
+
+            &:hover {
+                box-shadow: 0px 0px 20px 2px grey;
+            }
+
+            &-1 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &-2 {
+                background-color: rgb(174, 46, 46);
+                color: white;
+                width: 500px;
+            }
+
+            &-3 {
+                    
+            }
+        }
+
+        
+
+    }
+}
+
+.tech {
+    margin: 20px;
+    border-radius: 5px;
+    
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__gallery{
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+        &__item {
+            width: 100px;
+            height: 100px;
+        }
+    }
+}
+
+.footer {
+    position: fixed;
+    background-color: red;
+    width: 100vw;
+}
