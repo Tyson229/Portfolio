@@ -1,0 +1,11 @@
+@mixin element-layout {
+    margin-bottom: 10px;
+    width: 60vw;
+}
+
+@mixin child-layout {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

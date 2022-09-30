@@ -1,122 +1,145 @@
+@use "./partials/mixins";
+
+$sm: 100px;
+$md: 300px;
+
+img {
+    width: $sm;
+    height: $sm;
+}
+
+
 body {
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #efefef;
     font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
+
 .navigation {
     display: flex;
-    justify-content: flex-end;    
-    color: black;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 2px  rgb(179, 179, 179);  
+    background-color: white;
+    width: 100%;
     margin-bottom: 10px;
-
-    &__link {
-        font-size: 20px;
-        text-decoration: none;
-        border-radius: 3px;
-        padding:10px 20px;
-        &:hover {
-            background-color: rgb(88, 96, 96);
-            color: white;
+    
+    &__container {
+        @include mixins.element-layout();
+        @include mixins.child-layout();
+        justify-content: end;
+        &__link {
+            font-weight: bold;
+            margin-left: 10px;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            &:hover {
+                box-shadow: 0px 0px 2px  rgb(179, 179, 179);
+                border-radius: 5px;
+            }
         }
     }
 }
 
 .header {
-    padding: 10px;
+    @include mixins.element-layout();
+
+    justify-content: center;
+    align-items: center;
     display: flex;
-    justify-content: space-around;
     background-color: white;
     border-radius: 5px;
-    box-shadow: 0px 0px 10px -5px grey;
-    margin-bottom: 10px;
+    height: 300px;
+    
+    box-shadow: 0px 0px 2px  rgb(179, 179, 179);  
 
     &__name {
-
-        display: flex;
+        width: 40vw;
+        @include mixins.child-layout();
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        
         border-radius: 5px;
     }
 
+
+
     &__image {
-        width: 300px;
-        height: 300px;
+        @include mixins.child-layout();
+        padding: 10px;
+        width: 30vw;
+        width: 200px;
+        height: 200px;
     }
 
 }
 
-.about {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    justify-content: center;
-
-    &__header {
-        align-self: center;
-    }
-
-    &__exp {
+.name {
+    &__item {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
-        &__item {
-            width: 300px;
-            height: 300px;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 5px;
+    }
+}
 
-            &:hover {
-                box-shadow: 0px 0px 20px 2px grey;
-            }
+.about {
+    @include mixins.element-layout();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__item {
+        @include mixins.child-layout();
 
-            &-1 {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            &-2 {
-                background-color: rgb(174, 46, 46);
-                color: white;
-                width: 500px;
-            }
-
-            &-3 {
-                    
-            }
-        }
-
-        
 
     }
 }
 
 .tech {
-    margin: 20px;
-    border-radius: 5px;
-    
-    &__item {
-        display: flex;
+    @include mixins.element-layout();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__gallery {
+        @include mixins.child-layout();
         flex-wrap: wrap;
-    }
 
-    &__gallery{
-        display: flex;
-        justify-content: space-around;
-        padding: 20px;
         &__item {
-            width: 100px;
-            height: 100px;
+            width: 5em;
+            height: 5em;
+            padding: 10px;
         }
     }
 }
 
+
+
 .footer {
-    position: fixed;
-    background-color: red;
-    width: 100vw;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 0px 2px  rgb(179, 179, 179); 
+    &_title {
+        width: 10vw;
+    }
+
+    &__container {
+        @include mixins.element-layout();
+        @include mixins.child-layout();
+        justify-content: end;
+        width: 50vw;
+        &__item {
+            @include mixins.child-layout();
+            flex-direction: column;
+            padding:10px;
+            &-1 {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
 }
