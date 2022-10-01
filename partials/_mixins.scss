@@ -1,11 +1,53 @@
-@mixin element-layout {
-    margin-bottom: 10px;
-    width: 60vw;
-}
+@use "./devices";
 
-@mixin child-layout {
-    margin: 10px 0px;
+@mixin standard-layout {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@mixin standard-spacing {
+    margin: 10px;
+    padding: 10px;
+}
+
+@mixin grow-effect {
+    .grow { 
+        transition: all .2s ease-in-out; 
+
+        &:hover { 
+            transform: scale(1.2); 
+        }
+    }
+}
+
+//Mixins for medias
+@mixin phones {
+    @media only screen and (max-width: devices.$xs) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media only screen and (min-width: (devices.$xs + 1px)) and (max-width: devices.$sm) {
+        @content;
+    }
+}
+
+@mixin tablet-landscape {
+    @media only screen and (min-width: (devices.$sm + 1px)) and (max-width: devices.$md) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media only screen and (min-width: (devices.$md + 1px)) and (max-width: devices.$lg) {
+        @content;
+    }
+}
+
+@mixin monitors {
+    @media only screen and (min-width: (devices.$lg + 1px)) {
+        @content;
+    }
 }
