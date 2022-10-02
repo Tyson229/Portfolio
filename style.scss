@@ -1,15 +1,20 @@
 @use "./partials/mixins";
 @use "./partials/variables";
+@include mixins.grow-effect;
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     @include mixins.standard-layout();
     flex-direction: column;
     font-family: variables.$link-font;
-    //background-color: #efefef;
+    background-color: #efefef;
     width: 100vw;
     overflow-x: hidden; //Hide unwanted things
     margin: 0px;
-    padding: 0px;   
+    padding: 0px;
 }
 
 @include mixins.monitors {
@@ -63,8 +68,10 @@ body {
     .break {
         @include mixins.standard-layout;
         justify-content: space-between;
-        height: 24vh;
+        height: 25vh;
         width: variables.$width-monitor;
+        &--1 {
+        }
     }
 
 
@@ -73,62 +80,45 @@ body {
         width: 100vw;
         height: 100vh;
         //flex-direction: column;
-        //background-color: white;    
+        
         &__title {
             @include mixins.standard-layout;
+            background-color: black;
             color: white;
             height: 100%;
-            width: 40%;
-            margin: 0px;
-            & h1 {
-                @include mixins.standard-spacing;
-                @include mixins.standard-layout;
-                width: 50%;
-                height: 50%;
-                background-color: black;
-                border-radius: 50%;
-            }
-            
+            width: 30vw;
         }
-
         &__container {
             @include mixins.standard-layout;
+            //@include mixins.standard-spacing;
             flex-direction: column;
+            background-color: white;
             height: 100%;
-            width: 60%;
-            
-            &__item {
-                @include mixins.standard-layout;                
-            }
+            width: 70vw;
         }
     }
     
     .highlight {
-       // @include mixins.standard-layout;
-        @include mixins.standard-spacing;
-        padding: 20px;
+        @include mixins.standard-layout;
         width: 100%;
-       
+
+        &__item {
+            @include mixins.standard-spacing;
+        }
 
         &__title {
-            @include mixins.standard-layout;
-            width: 30%;
-            height: 100%;
             color:rgb(64, 172, 255);
-           
+            width: 20%;
         }
         &__content {
             @include mixins.standard-layout;
-            width: 70%;
-            height: 100%;
-            justify-content: space-evenly;
-            //background-color: white;
+            justify-content: start;
+            width: 50%;
+
             &__item {
-                padding: 10px;
-                
+                @include mixins.standard-spacing;
                 &--1 {
                     text-align: center;
-                    
                 }
 
                 & img {
@@ -139,38 +129,107 @@ body {
     }
     }
 
-    @include mixins.grow-effect;
-
-    .tech {
+    .project {
         @include mixins.standard-layout;
-        flex-direction: column;
         width: 100vw;
-        height: 50vh;
-        background-color: white;
+        height: 100vh;
 
+        flex-direction: column;
         &__title {
             @include mixins.standard-layout;
-            background-color: rgb(64, 172, 255);
-            color: white;
-            height: 100%;
-            margin: 0px;
-            width: 30%;
+        }
+
+        &__gallery {
+            @include mixins.standard-layout;
+            height: 70%;
+            &__item {
+                @include mixins.standard-spacing;
+                display: flex;
+                flex-direction: column;
+                background-color: white; 
+                border-radius:  5px;
+                width: 20%;
+                height: 70%;
+            }
+        }
+    }
+
+    .gallery {
+        &__content {
+            @include mixins.standard-spacing;
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            & img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+        &__link {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            & a{
+                @include mixins.standard-spacing;
+                text-decoration: none;
+                color: white;
+                background-color: rgb(29, 90, 212);
+               
+                border-radius: 5px;
+
+                
+            }
+
+            & a:hover {
+                background-color: rgb(0, 85, 255);
+            }
+
+        }
+    }
+
+
+
+    .tech {
+        @include mixins.standard-layout();
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+        background-color: white;
+        &__item {
+            @include mixins.standard-layout;
         }
 
         &__gallery {
             @include mixins.standard-layout;
             flex-wrap: wrap;
-            height: 100%;
-            width: 30%;
-            background-color: white;
             justify-content: space-around;
+            border-radius: 5px;
             &__item {
                 @include mixins.standard-spacing;
+                
+                &--1:hover {
+                    content: url("https://cdn-icons-png.flaticon.com/512/2305/2305941.png");
+                }
+                &--2:hover {
+                    content: url("https://cdn-icons-png.flaticon.com/512/2305/2305903.png");
+                }
+                &--3:hover {
+                    content: url("https://cdn-icons-png.flaticon.com/512/2305/2305963.png");
+                }
+                &--4:hover {
+                    content: url("https://cdn-icons-png.flaticon.com/512/2305/2305992.png");
+                }
+                &--5:hover {
+                    content: url("https://cdn-icons-png.flaticon.com/512/2306/2306022.png");
+                }
+                &--6:hover {
+                    content: url("https://cdn-icons-png.flaticon.com/512/2305/2305897.png");
+                }
             }
 
             & img {
-                width: 100px;
-                height: 100px;
+                width: 200px;
+                height: 200px;
             }
         }
     }

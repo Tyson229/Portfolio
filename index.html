@@ -12,15 +12,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="navigation">
+    <div class="navigation" id="top">
         <div class="navigation__container">
-            <a class="navigation__container__link" href="./index.html">Home</a>
+            <a class="navigation__container__link" href="#home">Home</a>
             <a class="navigation__container__link" href="#about">About</a>
-            <a class="navigation__container__link" href="">Project</a>
-            <a class="navigation__container__link" href="">Contact</a>
+            <a class="navigation__container__link" href="#project">Project</a>
+            <a class="navigation__container__link" href="#tech">Tech</a>
         </div>
     </div> 
-    <div class="title">
+    <div class="title" id="home">
         <div class="title__box title__box--name">
             <h1 class="title__box--name-header">Tien Nguyen</h1>
             <h3 class="title__box--name-sub">Software Developer</h3>
@@ -39,7 +39,7 @@
             <h1 class="">About Me</h1>
         </div>
         <div class="about__container">
-            <div class="about__container__item highlight">
+            <div class="highlight">
                 <div class="highlight__item highlight__title"><h2>Education</h2></div>
                 <div class="highlight__item highlight__content">
                     <div class=" highlight__content__item">
@@ -49,7 +49,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about__container__item highlight">
+            <div class="highlight">
                 <div class="highlight__item highlight__title"><h2>Skills</h2></div>
                 <div class="highlight__item highlight__content">
                     <div class="highlight__content__item highlight__content__item--1 grow">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about__container__item highlight">
+            <div class="highlight">
                 <div class="highlight__item highlight__title"><h2>Hobbies</h2></div>
                 <div class="highlight__item highlight__content">
                     <div class="highlight__content__item highlight__content__item--1 grow">
@@ -89,21 +89,60 @@
             </div>
         </div>
     </div>
-
-
-    <div class="tech">
-        <h1 class="tech__title tech__item">Tech</h1>
-        <div class="tech__gallery tech__item">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/186/186320.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/186/186319.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/4649/4649589.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/3665/3665923.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/226/226777.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/4785/4785958.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/2306/2306154.png">
-            <img class="tech__gallery__item grow" src="https://cdn-icons-png.flaticon.com/512/3098/3098090.png">
+    
+    </div>
+    <div class="project" id="project">
+        <h1 class="project__title project__item">Project</h1>
+        <div class="project__gallery project__item">
+            <div class="project__gallery__item gallery">
+                <div class="gallery__content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/905/905036.png">
+                    <h1>Nature Heals</h1>
+                    <p>A website allows reseachers and students to look for scientific tools that can be helpful in their research or study.</p>
+                </div>
+                <div class="gallery__link">
+                    <a href="https://github.com/Tyson229/Nature-Heals.git" target=”_blank”>Code</a>
+                </div>
+            </div>
+            <div class="project__gallery__item ">
+                <div class="gallery__content">
+                    <img src="./images/thebang.png">
+                    <h1>The Bang</h1>
+                    <p>Looking to buy a new pair of sneaker? This is an e-commerce store for you to buy your new shoes</p>
+                </div>
+                <div class="gallery__link">
+                    <a href="https://www.instagram.com/thebang.sneaker" target=”_blank”>Instgram</a>
+                    <a href="https://www.ebay.com.au/str/thebangsneaker" target=”_blank”>eBay</a>
+                </div>
+            </div>
+            <div class="project__gallery__item">
+                <div class="gallery__content">
+                    <img src="https://cdn-icons-png.flaticon.com/512/3575/3575485.png">
+                    <h1>Groceries Delivery App</h1>
+                    <p>This is a prototype created through JustInMind. It was born with an idea: "Can I order my groceries and get them delivered to me?"</p>
+                </div>
+                <div class="gallery__link">
+                    <a href="https://drive.google.com/file/d/1LTBfhRyY5f7AyZhwu8xLZRcNHxpbZ8Xm/view?usp=sharing">Download Link</a>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="tech" id="tech">
+        <h1 class="tech__title tech__item">Tech</h1>
+        <div class="tech__gallery tech__item">
+            <img class="tech__gallery__item tech__gallery__item--1 grow" src="https://cdn-icons-png.flaticon.com/512/2305/2305978.png">
+            <img class="tech__gallery__item tech__gallery__item--2 grow" src="https://cdn-icons-png.flaticon.com/512/2305/2305936.png">
+            <img class="tech__gallery__item tech__gallery__item--3 grow" src="https://cdn-icons-png.flaticon.com/512/2305/2305997.png">
+            <img class="tech__gallery__item tech__gallery__item--4 grow" src="https://cdn-icons-png.flaticon.com/512/2306/2306049.png">
+            <img class="tech__gallery__item tech__gallery__item--5 grow" src="https://cdn-icons-png.flaticon.com/512/2306/2306083.png">
+            <img class="tech__gallery__item tech__gallery__item--6 grow" src="https://cdn-icons-png.flaticon.com/512/2305/2305929.png">
+        </div>    
+    </div>
+    
+    <div class="contact">
+        
+    </div>
+
 
     <div class="footer">
         <div class="footer__title"><h3>Created in 2022</h3></div>
