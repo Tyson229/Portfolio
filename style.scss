@@ -5,7 +5,7 @@ body {
     @include mixins.standard-layout();
     flex-direction: column;
     font-family: variables.$link-font;
-    background-color: #efefef;
+    //background-color: #efefef;
     width: 100vw;
     overflow-x: hidden; //Hide unwanted things
     margin: 0px;
@@ -61,7 +61,9 @@ body {
     }
 
     .break {
-        height: 25vh;
+        @include mixins.standard-layout;
+        justify-content: space-between;
+        height: 24vh;
         width: variables.$width-monitor;
     }
 
@@ -69,51 +71,58 @@ body {
     .about {
         @include mixins.standard-layout();
         width: 100vw;
-        flex-direction: column;
-        background-color: black;
-        color:white;    
+        height: 100vh;
+        //flex-direction: column;
+        //background-color: white;    
         &__title {
             @include mixins.standard-layout;
-            color: rgb(64, 172, 255);
-            border: 1px solid #efefef;
-            height: 10vh;
+            color: white;
+            height: 100%;
+            width: 40%;
             margin: 0px;
-            width: 100%;
+            & h1 {
+                @include mixins.standard-spacing;
+                @include mixins.standard-layout;
+                width: 50%;
+                height: 50%;
+                background-color: black;
+                border-radius: 50%;
+            }
+            
         }
 
         &__container {
             @include mixins.standard-layout;
             flex-direction: column;
+            height: 100%;
+            width: 60%;
+            
             &__item {
-                @include mixins.standard-layout;
-                width: 100vw;
-                
+                @include mixins.standard-layout;                
             }
         }
     }
     
     .highlight {
-        height: 30vh;
-        //box-shadow: 0px 0px 2px  rgb(179, 179, 179);
-        @include mixins.standard-layout;
-        //@include mixins.standard-spacing;
-        padding: 10px;
-
-        &__item {
-            padding: 10px;
-        }
+       // @include mixins.standard-layout;
+        @include mixins.standard-spacing;
+        padding: 20px;
+        width: 100%;
+       
 
         &__title {
             @include mixins.standard-layout;
             width: 30%;
             height: 100%;
-            //background-color: #9A0034;
+            color:rgb(64, 172, 255);
+           
         }
         &__content {
             @include mixins.standard-layout;
-            width: 40%;
+            width: 70%;
             height: 100%;
             justify-content: space-evenly;
+            //background-color: white;
             &__item {
                 padding: 10px;
                 
@@ -131,28 +140,40 @@ body {
     }
 
     @include mixins.grow-effect;
-}   
-  
 
-    /*.tech {
-        @include mixins.element-layout();
-        display: flex;
+    .tech {
+        @include mixins.standard-layout;
         flex-direction: column;
-        align-items: center;
-        &__gallery {
-            @include mixins.child-layout();
-            flex-wrap: wrap;
+        width: 100vw;
+        height: 50vh;
+        background-color: white;
 
+        &__title {
+            @include mixins.standard-layout;
+            background-color: rgb(64, 172, 255);
+            color: white;
+            height: 100%;
+            margin: 0px;
+            width: 30%;
+        }
+
+        &__gallery {
+            @include mixins.standard-layout;
+            flex-wrap: wrap;
+            height: 100%;
+            width: 30%;
+            background-color: white;
+            justify-content: space-around;
             &__item {
-                width: 5em;
-                height: 5em;
-                padding: 10px;
+                @include mixins.standard-spacing;
+            }
+
+            & img {
+                width: 100px;
+                height: 100px;
             }
         }
     }
-
-
-
     .footer {
         width: 100%;
 
@@ -166,12 +187,12 @@ body {
         }
 
         &__container {
-            @include mixins.element-layout();
-            @include mixins.child-layout();
+            @include mixins.standard-layout;
+            @include mixins.standard-spacing;
             justify-content: end;
             width: 50vw;
             &__item {
-                @include mixins.child-layout();
+                @include mixins.standard-layout;
                 flex-direction: column;
                 padding:10px;
                 &-1 {
@@ -180,4 +201,12 @@ body {
                 }
             }
         }
-    }*/
+    }
+}   
+  
+
+    
+
+
+
+  
