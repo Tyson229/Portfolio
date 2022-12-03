@@ -25,8 +25,7 @@ const About = () => {
             <div className="h-2 w-2 bg-neutral-300 rounded-full m-2"></div>
             <div className="h-2 w-2 bg-neutral-400 rounded-full m-2"></div>
             <div className="opacity-50 w-full flex justify-end mx-2">v2.0</div>
-        </div>
-        <div></div>
+        </div> 
     </div>
     )
 

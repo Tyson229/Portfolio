@@ -1,62 +1,33 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useState } from "react";
+import { FaBars, FaTimes, FaBacon } from "react-icons/fa";
+import { BrowserRouter, Link ,Routes, Route} from "react-router-dom";
 
 const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
-    const [windowSize, setWindowSize] = useState(getWindowSize());
+  const navRef = useRef();
 
-    useEffect(() => {
-        const hanldleWindowResize = () => {
-            setWindowSize(getWindowSize());
-        }
+  const showNavBar = () => {
+    navRef.current.classList.toggle("hidden");
+  };
 
-        window.addEventListener('resize',hanldleWindowResize);
+  return (
+    <div className="w-full box-border flex max-md:flex-wrap p-3">
+      <Link to ='/' className="flex items-center justify-start w-1/2 ">
+          <FaBacon className="w-9 "/>
+          <span className="font-bold text-xl">khoangynn</span>
+      </Link>
+      <div className="w-1/2 flex flex-col justify-center items-end md:hidden ">
+        <button onClick={showNavBar}><FaBars /></button>
+      </div>
+      <nav className="hidden w-full box-border md:flex md:w-1/2  justify-end items-center  md:gap-5" ref={navRef}>
+          <Link to='/' className="block text-end my-2 hover:underline">Home</Link>
+          <Link to='/' className="block text-end my-2 hover:underline">About</Link>
+          <Link to='/' className="block text-end my-2 hover:underline">Project</Link>
+          <Link to='/' className="block text-end my-2 hover:underline">Tech</Link>
+        </nav>
+      
+    </div>
+  );
+};
 
-        return () => {
-            window.removeEventListener('resize',hanldleWindowResize);
-        };
-    },[]);
-
-    return ( 
-        <div className="
-            box-border 
-            flex 
-            p-3 
-            bg-gray-100 
-            max-md:relative 
-            max-md:items-end 
-            max-md:flex-col 
-            md:justify-end"
-        >
-            <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-                x
-            </button>
-            <nav 
-                className="
-                    absolute 
-                    top-12
-                    right-0
-                    h-screen
-                    
-                    
-                    
-                    bg-gray-100
-                    md:static
-                    
-                    " 
-                hidden = {isOpen == false && windowSize.innerWidth < 768}
-                >
-                    <a className="block md:inline-block">Home</a>
-                    <a className="block md:inline-block">About Me</a>
-                    <a className="block md:inline-block">Project</a>
-                    <a className="block md:inline-block">Tech</a>    
-            </nav>
-        </div>
-    )
-}
-
-const getWindowSize = () => {
-    const {innerWidth, innerHeight} = window;
-    return {innerWidth, innerHeight};
-}
 export default NavBar;
