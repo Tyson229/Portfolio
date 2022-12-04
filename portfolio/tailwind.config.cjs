@@ -7,7 +7,8 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      'name': ["'Oleo Script Swash Caps'",'cursive']
+      'name': ["'Oleo Script Swash Caps'",'cursive'],
+      'style': ["'Bungee Shade'", 'cursive']
     }
   },
   plugins: [],

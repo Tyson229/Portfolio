@@ -11,7 +11,7 @@ const NavBar = () => {
   };
 
   return (
-    <div className="w-full box-border flex max-md:flex-wrap p-3">
+    <div className="w-full box-border flex max-md:flex-wrap p-3 ">
       <Link to ='/' className="flex items-center justify-start w-1/2 ">
           <FaBacon className="w-9 "/>
           <span className="font-bold text-xl">khoangynn</span>
@@ -21,7 +21,7 @@ const NavBar = () => {
       </div>
       <nav className="hidden w-full box-border md:flex md:w-1/2  justify-end items-center  md:gap-5" ref={navRef}>
           <Link to='/' className="block text-end my-2 hover:underline">Home</Link>
-          <Link to='/' className="block text-end my-2 hover:underline">About</Link>
+          <Link to='/about' className="block text-end my-2 hover:underline">About</Link>
           <Link to='/' className="block text-end my-2 hover:underline">Project</Link>
           <Link to='/' className="block text-end my-2 hover:underline">Tech</Link>
         </nav>
