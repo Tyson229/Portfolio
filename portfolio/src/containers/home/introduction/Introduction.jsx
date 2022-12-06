@@ -12,14 +12,22 @@ const Introduction = () => {
           <div className="text-2xl text-black/60 w-full text-end">
             Hi, you've just met
           </div>
-          <div className="text-5xl w-full text-end py-4 rounded">Tien Khoa Nguyen</div>
+          <div className="text-5xl w-full text-end py-4 rounded">
+            Tien Khoa Nguyen
+          </div>
           <Roles />
-          <DecorationBars/>
+          <DecorationBars />
         </div>
         <div className="flex flex-col w-full md:justify-center text-end md:text-center pt-10 box-border gap-5">
-          <Link to='/about' className="uppercase text-lg">About.</Link>
-          <Link to='/projects' className="uppercase text-lg">Work.</Link>
-          <Link to='/connect' className="uppercase text-lg">Connect.</Link>
+          <Link to="/about" className="uppercase text-lg">
+            About.
+          </Link>
+          <Link to="/projects" className="uppercase text-lg">
+            Work.
+          </Link>
+          <Link to="/connect" className="uppercase text-lg">
+            Connect.
+          </Link>
         </div>
       </div>
       <div className="flex w-full justify-between items-center mt-10">
