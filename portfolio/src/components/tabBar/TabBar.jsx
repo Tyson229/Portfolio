@@ -7,7 +7,7 @@ const TabBar = ({ name }) => {
     //     <div className="w-4 h-4 bg-slate-500 rounded-full"></div>
     //   </div>
     // </div>
-    <div className="py-5 px-10 mb-5 w-full flex items-center box-border gap-3 lg:w-1/3 ">
+    <div className="py-5 px-10 w-full flex items-center box-border gap-3">
       <div className="flex -space-x-1">
         <div className="w-4 h-4 bg-black rounded-full"></div>
         <div className="w-4 h-4 bg-slate-500 rounded-full"></div>

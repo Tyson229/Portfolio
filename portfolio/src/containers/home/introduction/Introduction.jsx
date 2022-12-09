@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Introduction = () => {
   return (
     <div
-      className="h-full flex flex-col justify-center
-                 p-10 box-border overflow-hidden "
+      className="h-screen w-full flex flex-col justify-center
+                 p-10 box-border "
     >
       <div className="h-full flex flex-col md:grid md:grid-cols-2 justify-center w-full gap-1 box-border">
         <div className="w-full flex flex-col justify-center">
@@ -22,7 +22,7 @@ const Introduction = () => {
           <Link to="/about" className="uppercase text-lg">
             About.
           </Link>
-          <Link to="/projects" className="uppercase text-lg">
+          <Link to="/work" className="uppercase text-lg">
             Work.
           </Link>
           <Link to="/connect" className="uppercase text-lg">
