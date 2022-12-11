@@ -1,7 +1,6 @@
-import { useEffect, useRef } from "react";
-import { useState } from "react";
-import { FaBars, FaTimes, FaBacon } from "react-icons/fa";
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom";
+import { useRef } from "react";
+import { FaBars, FaBacon } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   const navRef = useRef();
@@ -34,7 +33,7 @@ const NavBar = () => {
         <Link to="/work" className="block text-end my-2 hover:underline">
           Work
         </Link>
-        <Link to="/" className="block text-end my-2 hover:underline">
+        <Link to="/connect" className="block text-end my-2 hover:underline">
           Connect
         </Link>
       </nav>
